@@ -1,4 +1,4 @@
 # Just WebSite
 <p align="center">
-  <img src="" width="400" />
+  <img src="https://github.com/rediskazavr/just-website/blob/main/img/latte.png" width="400" />
 </p>
