@@ -1,2 +1,4 @@
-# just-website
-Simple Site
+# Just WebSite
+<p align="center">
+  <img src="" width="400" />
+</p>
