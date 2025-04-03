@@ -24,7 +24,7 @@ body {
     transform: translate(-50%, -50%);
     max-width: 800px; /* Ограничиваем ширину контейнера */
     text-align: left; /* Выравниваем текст по центру */
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(21, 21, 21, 0.7);
     padding: 20px;
     border-radius: 10px;
 }
