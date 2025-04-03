@@ -31,7 +31,7 @@ body {
 
 .content {
     text-align: left;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 15px;
     font-family: 'MyFont', Arial, sans-serif;
     max-width: 80%;
