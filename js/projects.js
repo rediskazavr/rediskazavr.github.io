@@ -3,7 +3,7 @@ function convertMarkdownToHTML(markdownText) {
     return converter.makeHtml(markdownText);
 }
 
-fetch('../md/resume.md')
+fetch('../md/projects.md')
     .then(response => response.text())
     .then(data => {
         const htmlContent = convertMarkdownToHTML(data);
