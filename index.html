@@ -6,43 +6,82 @@
     <title>rediskazavr</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./favicon.jpg">
+    <style>
+        body {
+            margin: 0;
+            color: rgb(255, 255, 255);
+            font-family: monospace;
+            padding-left: 450px;     
+            padding-top: 50px;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+
+        img[alt="avatar"] {
+            position: fixed;
+            left: 30px;
+            top: 30px;
+            width: 400px;
+            height: 400px;
+            z-index: 10;
+        }
+
+        .q-mark {
+            position: fixed;
+            width: 70px;
+            opacity: 0.7;
+            pointer-events: none;
+            z-index: 5;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .q-mark:nth-child(1) { animation-delay: 0s; }
+        .q-mark:nth-child(2) { animation-delay: 1s; }
+        .q-mark:nth-child(3) { animation-delay: 2.5s; }
+        .q-mark:nth-child(4) { animation-delay: 4s; }
+        .q-mark:nth-child(5) { animation-delay: 5.5s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50%      { transform: translateY(-30px) rotate(10deg); }
+        }
+
+        .center-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: monospace;
+            pointer-events: none;
+            max-width: 90%;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    
-    <div class="frame">
-        <div class="content">
-            <div align="center">
-            <h1><img src="./img/doggies/chill_guy.png" height="32" width="32">Hi there! I'm rediskazavr:)<img src="./img/doggies/chill_guy.png" height="32" width="32"></h1>
-            <h2><img src="./img/doggies/pc.png" height="32" width="32">About me<img src="./img/doggies/pc.png" height="32" width="32"></h2>
-            <p><img src="./img/doggies/user.png" height="32" width="32">I love programming and generally anything to do with technology or computers. I can't answer about my skills yet, because I am looking for myself in different spheres<img src="./img/doggies/user.png" height="32" width="32"></p>
-            <p><img src="./img/doggies/like.png" height="32" width="32">My favorite projects:<img src="./img/doggies/like.png" height="32" width="32"></p>
-            <button class="button" onclick="window.location.href='https://github.com/rediskazavr/ax3-tools'">
-                <span class="label">ax3-tools</span>
-                <span class="gradient-container">
-                <span class="gradient"></span>
-                </span>
-            </button>
-            <button class="button" onclick="window.location.href='https://github.com/rediskazavr/zell-web'">
-                <span class="label">zell-web</span>
-                <span class="gradient-container">
-                <span class="gradient"></span>
-                </span>
-            </button>
-                <button class="button" onclick="window.location.href='https://github.com/rediskazavr/ranim-lib'">
-                <span class="label">ranim-lib</span>
-                <span class="gradient-container">
-                <span class="gradient"></span>
-                </span>
-            </button>
-            </div>
-            </button>
-                <button class="button" onclick="window.location.href='./pages/more.html'">
-                <span class="label">More...</span>
-                <span class="gradient-container">
-                <span class="gradient"></span>
-                </span>
-            </button>
-        </div>
+
+    <img src="./img/avatar.jpg" width="400" height="400" alt="avatar">
+
+    <p>BIO</p>
+    <p>dcs: i love the topic of Linux, distributions,</p>
+    <p>and lately working with VPNs.</p>
+    <p>about me: i'm studying at Cloud Native Architect</p>
+    <p>.ru region</p>
+    <p>my blog (russian) => https://t.me/rediskanewtime</p>
+    <p>organization: <a href="https://github.com/PodpolnayaGryadka/">PodpolnayaGryadka</a><br></p>
+    <p>my favorite repo:</p>
+    <a href="https://github.com/rediskazavr/ranim-lib">ranim-library</a><br>
+    <a href="https://github.com/rediskazavr/ax3-tools">ax3-tools</a>
+
+    <div class="center-text">
+        <p></p>
     </div>
+
+    <img src="./img/dog1.webp" class="q-mark" style="top:12%; right:8%;">
+    <img src="./img/dog2.webp" class="q-mark" style="top:28%; right:4%;">
+    <img src="./img/dog3.webp" class="q-mark" style="top:45%; right:9%;">
+    <img src="./img/dog4.webp" class="q-mark" style="top:63%; right:5%;">
+    <img src="./img/dog5.webp" class="q-mark" style="top:80%; right:7%; width:90px;">
+
 </body>
 </html>
