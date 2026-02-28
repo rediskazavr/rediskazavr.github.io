@@ -62,21 +62,32 @@
 
   <div class="card-qr">
 
-    <div class="qr-item">
-      <div class="qr-box">
-        <div class="qr-placeholder"></div>
-        <span class="qr-placeholder-text"><img src="./img/bitcoin-qr.png" alt="Crypto Wallet QR" width="200" height="200"></span>
-      </div>
-      <span class="qr-label"></span>
-    </div>
+<div class="qr-box" onclick="copyBTCAddress()" style="cursor: pointer;">
+  <span class="qr-placeholder-text">
+    <img src="./img/bitcoin-qr.png" alt="Crypto Wallet QR" width="200" height="200">
+  </span>
+</div>
 
-    <div class="qr-item">
-      <div class="qr-box">
-        <div class="qr-placeholder"></div>
-        <span class="qr-placeholder-text"><img src="./img/telegram-qr.png" alt="Telegram QR" width="220" height="220"></span>
-      </div>
-      <span class="qr-label"></span>
-    </div>
+<script>
+function copyBTCAddress() {
+  const btcAddress = "bc1qtu29jlkq4tcslngesrm3wwqfrgndf39stz6dvl";
+  navigator.clipboard.writeText(btcAddress).then(() => {
+    alert("Adress Copied! " + btcAddress);
+  });
+}
+</script>
+
+<div class="qr-item">
+  <div class="qr-box">
+    <div class="qr-placeholder"></div>
+    <span class="qr-placeholder-text">
+      <a href="https://t.me/whoweb3" target="_blank">
+        <img src="/img/telegram-qr.png" alt="QR Telegram" width="200" height="200">
+      </a>
+    </span>
+  </div>
+  <span class="qr-label"></span>
+</div>
 
   </div>
 
