@@ -1,3 +1,269 @@
-body {
-    font-family: monospace;
+/* Font placeholder */
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url(/fonts/SF-Pro-Rounded-Bold.otf) format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
+
+:root {
+      --bg: #0a0a0a;
+      --card-bg: #161618;
+      --card-inner: #1e1e20;
+      --border: rgba(255,255,255,0.07);
+      --text-primary: #f0f0f0;
+      --text-muted: #888;
+      --accent: #000000;
+      --accent-dim: rgb(255, 255, 255);
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+
+      --font-heading: 'SF Pro Text';   
+      --font-mono: 'SF Pro Text';       
+      --font-body: "SF Pro Text";      
+    }
+
+body {
+      background: var(--bg);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px 40px;
+      font-family: var(--font-body);
+    }
+
+.wrapper {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+@keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .profile-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      flex-shrink: 0;
+      background: var(--card-inner);
+      background: linear-gradient(135deg, #2a2a2e, #3a3a3e);
+    }
+
+     .avatar-placeholder {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--card-inner);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .name {
+      font-family: var(--font-heading); /* NAME FONT */
+      font-size: clamp(1.3rem, 5vw, 1.6rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .badge {
+      background: var(--card-inner);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .badge:hover {
+      border-color: rgba(255,255,255,0.14);
+      background: #232325;
+    }
+
+    .badge-icon {
+      font-size: 18px;
+      width: 22px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+        .badge-flag {
+      font-size: 11px;
+      font-family: var(--font-mono); /* BADGE LABEL FONT */
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      width: 22px;
+      flex-shrink: 0;
+    }
+
+    .badge-text {
+      font-family: var(--font-body); /* BADGE LABEL FONT */
+      font-size: 0.88rem;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    /* Projects section */
+    .projects-badge {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .projects-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .project-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--accent-dim);
+      transition: background 0.2s;
+      margin-left: 0px;
+    }
+
+    .project-link:hover {
+      background: rgba(255, 255, 255, 0.322);
+    }
+
+    .project-link svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .project-link span {
+      font-family: var(--font-body); /* LINK FONT */
+      font-size: 0.86rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* ── QR CARD ── */
+    .card-qr {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .qr-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qr-box {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* QR placeholder grid pattern */
+    .qr-placeholder {
+      width: 80%;
+      height: 80%;
+      background:
+        repeating-linear-gradient(
+          0deg,
+          #000 0px, #000 4px,
+          transparent 4px, transparent 8px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          #000 0px, #000 4px,
+          transparent 4px, transparent 8px
+        );
+      opacity: 0.15;
+      border-radius: 2px;
+    }
+
+    .qr-placeholder-text {
+      position: absolute;
+      font-family: var(--font-mono); /* QR LABEL FONT */
+      font-size: 9px;
+      color: #555;
+      text-align: center;
+      padding: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .qr-label {
+      font-family: var(--font-mono); /* QR LABEL FONT */
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      font-family: var(--font-body); /* FOOTER FONT */
+      font-size: 0.72rem;
+      color: #444;
+      letter-spacing: 0.06em;
+      padding-top: 4px;
+    }
+
+    /* ── DESKTOP ── */
+    @media (min-width: 640px) {
+      .wrapper { max-width: 460px; }
+      .name { font-size: 1.75rem; }
+      .avatar-placeholder { width: 64px; height: 64px; font-size: 32px; }
+    }

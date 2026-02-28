@@ -6,75 +6,84 @@
     <title>rediskazavr</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" href="./favicon.jpg">
-    <style>
-        body {
-            margin: 0;
-            color: rgb(255, 255, 255);
-            font-family: monospace;
-            padding-left: 450px;     
-            padding-top: 50px;
-            box-sizing: border-box;
-            min-height: 100vh;
-        }
-
-        img[alt="avatar"] {
-            position: fixed;
-            left: 30px;
-            top: 30px;
-            width: 400px;
-            height: 400px;
-            z-index: 10;
-        }
-
-        .q-mark {
-            position: fixed;
-            width: 70px;
-            opacity: 0.7;
-            pointer-events: none;
-            z-index: 5;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .q-mark:nth-child(1) { animation-delay: 0s; }
-        .q-mark:nth-child(2) { animation-delay: 1s; }
-        .q-mark:nth-child(3) { animation-delay: 2.5s; }
-        .q-mark:nth-child(4) { animation-delay: 4s; }
-        .q-mark:nth-child(5) { animation-delay: 5.5s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50%      { transform: translateY(-30px) rotate(10deg); }
-        }
-
-        .center-text {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: monospace;
-            pointer-events: none;
-            max-width: 90%;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
+    <div class="wrapper">
 
-    <img src="./img/avatar1.jpg" width="400" height="400" alt="avatar">
-
-    <p>BIO</p>
-    <p>dcs: i love the topic of Linux, distributions,</p>
-    <p>and lately working with VPNs.</p>
-    <p>about me: i'm studying at Cloud Native Architect</p>
-    <p>.ru region</p>
-    <p>my blog (russian) => https://t.me/rediskanewtime</p>
-    <p>organization: <a href="https://github.com/PodpolnayaGryadka/">PodpolnayaGryadka</a><br></p>
-    <p>my favorite repo:</p>
-    <a href="https://github.com/rediskazavr/ranim-lib">ranim-library</a><br>
-    <a href="https://github.com/rediskazavr/ax3-tools">ax3-tools</a>
-
-    <div class="center-text">
-        <p></p>
+  <div class="card"> 
+    <div class="profile-row">
+      <img class="avatar" src="./img/avatar.jpg" alt="Matvey">
+      <div class="name">hello, i'm matvey <img src="./img/waving-hand.png" alt="waving-hand" width="24" height="24"></div>
     </div>
+
+    <div class="badge">
+      <span class="badge-flag"><img src="./img/flag-for-russia.png" alt="Russia Flag" width="24" height="24"></span>
+      <span class="badge-text">Russia</span>
+    </div>
+
+   
+    <div class="badge">
+      <span class="badge-icon"><img src="./img/personal-computer.png" alt="Personal Computer" width="24" height="24"></span>
+      <span class="badge-text">Building hands-on experience with Linux servers and networking</span>
+    </div>
+
+
+    <div class="badge projects-badge">
+      <div class="projects-header">
+        <span class="badge-icon"><img src="./img/electric-light-bulb.png" alt="bulb" width="24" height="24"></span>
+        <span class="badge-text">Projects</span>
+      </div>
+      <a class="project-link" href="https://github.com/rediskazavr" target="_blank" rel="noopener">
+        
+
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303
+            3.438 9.8 8.205 11.385.6.113.82-.258.82-.577
+            0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+            C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729
+            1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305
+            3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93
+            0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176
+            0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405
+            1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23
+            3.285-1.23.645 1.653.24 2.873.12 3.176.765.84
+            1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475
+            5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015
+            3.286 0 .315.21.69.825.57C20.565 22.092 24
+            17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+        </svg>
+        <span>GitHub Profile</span>
+      </a>
+      
+    </div>
+
+  </div>
+
+
+  <div class="card-qr">
+
+    <div class="qr-item">
+      <div class="qr-box">
+        <div class="qr-placeholder"></div>
+        <span class="qr-placeholder-text"><img src="./img/bitcoin-qr.png" alt="Crypto Wallet QR" width="200" height="200"></span>
+      </div>
+      <span class="qr-label"></span>
+    </div>
+
+    <div class="qr-item">
+      <div class="qr-box">
+        <div class="qr-placeholder"></div>
+        <span class="qr-placeholder-text"><img src="./img/telegram-qr.png" alt="Telegram QR" width="220" height="220"></span>
+      </div>
+      <span class="qr-label"></span>
+    </div>
+
+  </div>
+
+
+  <p class="footer">компьютерный хулиган</p>
+
+</div>
+
 </body>
 </html>
