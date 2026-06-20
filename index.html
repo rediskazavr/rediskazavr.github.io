@@ -5,32 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rediskazavr</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" href="./emo.png">
 </head>
 <body>
     <div class="wrapper">
 
   <div class="card"> 
     <div class="profile-row">
-      <img class="avatar" src="./img/avatar2.jpg" alt="Matvey">
-      <div class="name">Hi, I'm Matvey <img src="./img/waving-hand.png" alt="waving-hand" width="24" height="24"></div>
+      <img class="avatar" src="./img/avatar-profile.jpg" alt="avatar-profile">
+      <div class="name">Hi, I'm Matvey <img src="https://em-content.zobj.net/source/apple/453/waving-hand_1f44b.png" alt="waving-hand" width="24" height="24"></div>
     </div>
 
     <div class="badge">
-      <span class="badge-flag"><img src="./img/flag-for-russia.png" alt="Russia Flag" width="24" height="24"></span>
+      <span class="badge-flag"><img src="https://em-content.zobj.net/source/apple/453/flag-russia_1f1f7-1f1fa.png" alt="Russia Flag" width="24" height="24"></span>
       <span class="badge-text">Russia</span>
     </div>
 
    
     <div class="badge">
-      <span class="badge-icon"><img src="./img/personal-computer.png" alt="Personal Computer" width="24" height="24"></span>
+      <span class="badge-icon"><img src="https://em-content.zobj.net/source/apple/453/laptop_1f4bb.png" alt="Personal Computer" width="24" height="24"></span>
       <span class="badge-text">Building hands-on experience with Linux servers and networking</span>
     </div>
 
 
     <div class="badge projects-badge">
       <div class="projects-header">
-        <span class="badge-icon"><img src="./img/electric-light-bulb.png" alt="bulb" width="24" height="24"></span>
+        <span class="badge-icon"><img src="https://em-content.zobj.net/source/apple/453/light-bulb_1f4a1.png" alt="bulb" width="24" height="24"></span>
         <span class="badge-text">Projects</span>
       </div>
       <a class="project-link" href="https://github.com/rediskazavr" target="_blank" rel="noopener">
@@ -62,15 +61,15 @@
 
   <div class="card-qr">
 
-<div class="qr-box" onclick="copyBTCAddress()" style="cursor: pointer;">
+<div class="qr-box" onclick="copyTRXAddress()" style="cursor: pointer;">
   <span class="qr-placeholder-text">
-    <img src="./img/bitcoin-qr.png" alt="Crypto Wallet QR" width="200" height="200">
+    <img src="./img/trx-qr.png" alt="Crypto Wallet QR" width="200" height="200">
   </span>
 </div>
 
 <script>
-function copyBTCAddress() {
-  const btcAddress = "bc1qtu29jlkq4tcslngesrm3wwqfrgndf39stz6dvl";
+function copyTRXAddress() {
+  const btcAddress = "TSrCrKE3U5dy2xtMpzEXb5Nf5BWrM9NPYS";
   navigator.clipboard.writeText(btcAddress).then(() => {
     alert("Adress Copied! " + btcAddress);
   });
